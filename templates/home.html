@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="image-div">
+  <img class="background-image" src="{{ url_for('static', filename='images/background-image.jpg') }}" />
+</div>
+<!--Homepage section text-->
+<div class="container lead-hero">
+  <h1 class="title">Text2Binary & Binary2Text</h1>
+  <p class="lead">Encode Text, Decode Binary.</p>
+</div>
+<!--Content on homepage section-->
+<section>
+  <div class="container-fluid page-section-color-bg">
+    <div class="container">
+      <div class="row row-section">
+        <div class="col-12 col-md-6 large-image">
+          <img class="encode-image" src="{{ url_for('static', filename='images/encode.jpg') }}" alt="red heart on top of 0s and 1s" />
+        </div>
+        <div class="col-12 col-md-6 text-sm-right right-hand-text pr-lg-5">
+          <h2 class="title homepage-section-title"> Encode Text </h2>
+          <div class="d-flex justify-content-end">
+            <div class="set-width">
+              <p class="lead homepage-section-text"> Write a text that you wanna convert into 0s and 1s. </p>
+            </div>
+          </div>
+          <a role="button" class="btn btn-outline-light" href="/index">Encode Text <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Decode text Homepage section-->
+<section>
+  <div class="page-section-plain-bg">
+    <div class="container">
+      <div class="row row-section">
+        <div class="col-12 col-md-6 large-image order-sm-12">
+          <img class="decode-image" src="{{ url_for('static', filename='images/decode.jpg') }}" alt="red heart on top of 0s and 1s" />
+        </div>
+        <div class="col-12 col-md-6 text-sm-left order-sm-1 left-hand-text pl-lg-5">
+          <h2 class="title homepage-section-title"> Decode Binary </h2>
+          <div class="set-width">
+            <p class="lead homepage-section-text"> Convert a binary code to a human-readable plain text. </p>
+          </div>
+          <a role="button" class="btn btn-outline-dark" href="/decode">Decode Binary <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--About Homepage Section-->
+<section>
+  <div class="container">
+    <div class="row row-section">
+      <div class="col-12 col-md-6 large-image">
+        <img class="about-image" src="{{ url_for('static', filename='images/about.jpg') }}">
+      </div>
+      <div class="col-12 col-md-6 text-sm-right right-hand-text pr-lg-5">
+        <h2 class="title homepage-section-title"> About BinText Converter </h2>
+        <div class="d-flex justify-content-end">
+          <div class="set-width">
+            <p class="lead homepage-section-text"> Learn more about Binary Converter. Learn about our history. </p>
+          </div>
+        </div>
+        <a role="button" class="btn btn-outline-light" href="/about">Learn About Us <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

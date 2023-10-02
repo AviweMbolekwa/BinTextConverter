@@ -1,0 +1,22 @@
+{% extends 'layout.html' %} {% block content %} <section>
+    <h1 class="title sub-page-header"> Decode Binary </h1>
+    <div class="page-nav">
+      <p>
+        <span class="page-nav-item inline-block small">Cracking the Binary Code: Turning 0s and 1s into Words!</span>
+      </p>
+    </div>
+  </section>
+  <!--Encode text section-->
+  <section id="encode-text">
+    <div class="container-fluid page-section-color-bg">
+      <div class="container">
+        <form class="message-form" method="post">
+          <div>
+            <label for="message">Enter the binary code</label>
+            <textarea name="message" id="input-text-area" rows="8" maxlength="20000" autofocus name="message" required></textarea>
+          </div>
+          <button class="output-btn">convert binary</button>
+        </form>
+      </div>
+    </div> {% if message %} <h4 id="message-header">MESSAGE:</h4>
+    <div class="message-div">{{message}}</div> {% endif %} {% if error %} <p class="error-message">{{error}}</p> {% endif %} {% endblock %}

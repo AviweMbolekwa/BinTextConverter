@@ -1,0 +1,59 @@
+{% extends 'layout.html' %} {% block content %}
+<!--Page Header and Sub Menu-->
+<section>
+  <h1 class="title sub-page-header"> About </h1>
+  <div class="page-nav">
+    <p>
+      <span class="page-nav-item inline-block small">
+        <a href="#history" aria-label="Jump to History section">Our History</a>
+      </span>
+      <span class="page-nav-item inline-block small">
+        <a href="#functionality" aria-label="Jump to Functionality section">How It Works</a>
+      </span>
+    </p>
+  </div>
+</section>
+<!--Mission Section-->
+<section id="vision">
+  <div class="container-fluid page-section-color-bg">
+    <div class="container">
+      <div class="row row-section">
+        <div class="col-12 col-md-6 large-image">
+          <img src="{{ url_for('static', filename='images/work.jpg') }}" alt="three men with masks staring on a computer screen" />
+        </div>
+        <div class="col-12 col-md-6 text-sm-right right-hand-text pr-lg-5">
+          <h2 class="title homepage-section-title"> Our History </h2>
+          <div class="d-flex justify-content-end">
+            <div class="set-width">
+              <p id="our-history" class="lead homepage-section-text"> I developed BinText Converter post my successful completion of Harvard University's <a href="https://cs50.harvard.edu/x/2023/" class="external-link" target="_blank">CS50x: Introduction to Computer Science</a>. Drawing inspiration from the course's <a href="https://cs50.harvard.edu/x/2023/psets/2/bulbs/" class="external-link" target="_blank">"Bulbs" problem set</a>, this web app turns text messages into captivating binary bulb-like patterns, delivering an engaging user experience. </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Functionality section-->
+<section id="functionality">
+  <div class="page-section-plain-bg">
+    <div class="container">
+      <div class="row row-section">
+        <div class="col-12 col-md-6 large-image order-sm-12">
+          <img class="decode-image" src="{{ url_for('static', filename='images/us.jpg') }}" alt="red heart on top of 0s and 1s" />
+        </div>
+        <div class="col-12 col-md-6 text-sm-left order-sm-1 left-hand-text pl-lg-5">
+          <h2 class="title homepage-section-title"> How It Works </h2>
+          <div class="set-width">
+            <p class="lead homepage-section-text">
+            <ol>
+              <li>Input the text or binary data of your choice into the designated textarea.</li>
+              <li>The Flask backend system will then individually convert each character of your provided message into its corresponding Unicode value.</li>
+              <li>You will receive output.</li>
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> {% endblock %}

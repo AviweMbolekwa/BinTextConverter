@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section>
+    <h1 class="title sub-page-header"> Encode Text </h1>
+    <div class="page-nav">
+      <p>
+        <span class="page-nav-item inline-block small">Turning Words into 0s and 1s:The Art of Binary Translation!</span>
+      </p>
+    </div>
+  </section>
+  <!--Encode text section-->
+  <section id="encode-text">
+    <div class="container-fluid page-section-color-bg">
+      <div class="container">
+        <form class="message-form" method="post">
+          <div>
+            <label for="message">Write a text</label>
+            <textarea name="message" id="input-text-area" rows="8" maxlength="1000" autofocus name="message" required></textarea>
+          </div>
+          <div id="char-used-div">
+            <span id="char-used">0</span>/1000 character limit
+          </div>
+          <button class="output-btn">convert text</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const charsUsedEl = document.getElementById('char-used')
+      document.getElementById('input-text-area').addEventListener('input', () => updateCharCounter())
+
+      function updateCharCounter() {
+        const textAriaCharNum = document.getElementById('input-text-area').value.length
+        charsUsedEl.innerText = textAriaCharNum
+      }
+    </script> {% if message %} <div id="output-option-div">
+      <div>
+        <input type="radio" id="bulbs" name="output-option" value="bulbs" checked>
+        <label for="bulbs">Bulbs</label>
+      </div>
+      <div>
+        <input type="radio" id="nums" name="output-option" value="nums">
+        <label for="nums">0s and 1s</label>
+      </div>
+    </div>
+    <button id="copy-btn">copy binary to clipboard</button>
+    <div class="message-div" id="binary-message">{{message}}</div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    {% endif %}
+
+    {% if error %}
+    <p class="error-message">{{error}} </p>
+    {% endif %}
+  </section>
+  {% endblock %}
