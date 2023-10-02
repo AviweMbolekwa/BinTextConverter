@@ -41,7 +41,7 @@
 - jQuery
 - Ionicons
 - Flask (Python web framework)
- Git
+- Git
    - I used Git as a version control in the terminal
 - GitHub
    - I used github create and store the project repository
