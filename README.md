@@ -25,8 +25,6 @@
 # Project status
 - BinText Converter is actively maintained and improved. Users can access it via its website, and the project's source code is available on here on GitHub for collaboration and contributions.
 
-BinText Converter is actively maintained and improved. Users can access it via its website, and the project's source code is available on GitHub for collaboration and contributions.
-
 # User experience
  - The primary goal of BinText Converter is to provide a seamless and efficient user experience for encoding and decoding text. Users can access the application from various devices and browsers, making it a versatile tool for a wide audience.
 
